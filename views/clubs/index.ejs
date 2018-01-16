@@ -9,9 +9,13 @@
 
 	<a href="/clubs/new">Create a New Club</a>
 	<ul>
-		<li>
-			
-		</li>
+		<% for (var i = 0; i < clubs.length; i++) { -%>
+			<li>
+				<a href="/clubs/<%=clubs[i].id%>"><%= clubs[i].name %></a> <br>
+				Type: <%= clubs[i].type %> <br>
+				Size: <%= clubs[i].size %> <br>
+			</li>	
+		<% } -%>
 	</ul>
 </body>
 </html>

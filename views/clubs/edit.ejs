@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= club.name %></title>
+</head>
+<body>
+	<form>
+		Name: <input type="text" name="name" value=	<%= club.name %>> <br>
+		Type: <input type="text" name="type" value=	<%= club.type %>> <br>
+		Size: <input type="text" name="size" value=	<%= club.size %>> <br>
+	</form>
+
+	<form action="/clubs/<%= club.id %>?_method=PUT" method="POST">
+		<input type="submit" value="Update Club">
+	</form>
+</body>
+</html>
